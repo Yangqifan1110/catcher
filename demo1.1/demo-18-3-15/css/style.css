@@ -1,0 +1,51 @@
+#header{position: absolute; width: 100%; height: 30px;z-index: 5; padding-top: 10px;}
+
+#header .logo span.title{ color: #fff; font-size: 24px; line-height: 40px;}
+#header .logo input{ width: 240px; height: 36px; background-color: rgba(222,222,222,0.1);border: none;
+margin-left: 10px;color: #fff; padding-left: 15px; font-size: 16px; border-radius: 6px; }
+#header .logo span.search{ color: #fff; margin-left: -30px; font-size: 18px; cursor: pointer;}
+
+#header .nav{ padding-top: 10px;padding-left: 40px;}
+#header .nav span a{text-decoration: none; color: #ccc; font-size: 16px; margin-left: 15px; }
+#header .nav span a:hover{color: #fff}
+
+#header .login { padding-top: 10px;padding-left: 260px;}
+#header .login span a{text-decoration: none; color: #ccc; font-size: 16px; margin-left: 15px; }
+#header .login span a:hover{color: #fff}
+
+
+
+
+#choose{ text-align: center; margin-top: 40px;}
+#choose span{ font-size: 18px; color: #999;display:inline-block; width: 120px; height: 40px;cursor: pointer;}
+
+#contant li{ width: 32%; height: 280px; border: 1px solid #ccc; box-sizing: border-box;float: left; list-style: none}
+#contant li div{ width: 100%; height:250px; overflow: hidden;}
+#contant li img{ width: 100%}
+
+
+/* footer */
+.footer{ width: 100%;  color: #F5F5F5;background: #1A1A1A; height: 240px; margin-top: 40px;  }
+.footer ul{width: 100%;padding-top: 30px;}
+.footer ul div{font-size: 40px; margin-bottom: 20px;	  }
+.footer ul li{ list-style: none; float: left;width: 33%; text-align: center;	 }
+.footer p.bottom{  position: relative; top: 100px; width: 100%; text-align: center;   }
+
+
+
+/* creat */
+#creat{ text-align: center;}
+#creat .creatCon{ width: 80%; margin-left: 10%;}
+#creat .who{ margin-top: 20px; margin-bottom: 20px;}
+#creat .location select{ width: 30%; display: inline; margin-right: 2%}
+#creat p{ color: #ccc; text-align: left;}
+#creat p.ok{ color: #17A05E}
+#creat p.no{ color: #f00}
+
+
+/* login */
+#login{text-align: center;}
+#login .lging{width: 80%;margin-left: 10%; height: 400px;}
+#login .who{ margin-top: 20px; margin-bottom: 50px;}
+#login .lging .go input{  height: 40px; margin-bottom: 20px;}
+#login .go button{ width: 30%; margin-top: 60px;}

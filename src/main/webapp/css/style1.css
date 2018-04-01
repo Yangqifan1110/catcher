@@ -1,0 +1,74 @@
+#header{ width: 100%; height: 60px;z-index: 5; padding-top: 10px; background: #1A1A1A}
+
+#header .logo span.title{ color: #fff; font-size: 24px; line-height: 40px;}
+#header .logo input{ width: 240px; height: 36px; background-color: rgba(222,222,222,0.1);border: none;
+margin-left: 10px;color: #fff; padding-left: 15px; font-size: 16px; border-radius: 6px; }
+#header .logo span.search{ color: #fff; margin-left: -30px; font-size: 18px; cursor: pointer;}
+
+#header .nav{ padding-top: 10px;padding-left: 40px;}
+#header .nav span a{text-decoration: none; color: #ccc; font-size: 16px; margin-left: 15px; }
+#header .nav span a:hover{color: #fff}
+
+#header .login { padding-top: 10px;padding-left: 260px;}
+#header .login span a{text-decoration: none; color: #ccc; font-size: 16px; margin-left: 15px; }
+#header .login span a:hover{color: #fff}
+
+
+
+#view{ height: 600px; background: #1A1A1A; }
+#view  .pic { height: 600px; padding-top: 20px;}
+#view  .text { height: 600px;padding-top: 20px;}
+#view .pic .watch{ width: 80%; height: 400px; margin-left: 10%;text-align: center;}
+#view .pic .watch img{ max-width: 100%; max-height: 100%; vertical-align: middle;}
+#view .pic  .list{ width: 80%; height: 90px;  margin-left: 10%; margin-top: 20px;}
+#view .pic  .list ul{ padding: 0; }
+#view .pic  .list li{width: 20%; height: 90px; float: left;overflow: hidden; }
+#view .pic  .list li img{ width: 100%; }
+#view .pic  .list li img.b{ border: 1px solid #f00}
+#view .pic  .list span{ font-size: 36px; color: #aaa; position: relative; top:-60px; cursor: pointer;}
+#view .pic  .list span.left{ left: -5%;}
+#view .pic  .list span.right{ left: 95%;}
+  #view .pic  .style { text-align: center; color: #7D7D7D; font-size: 16px; margin-top: 10px;}
+#view .pic  .style span{ margin-left: 10px;}
+
+#view .text .phterHead{ width: 80px; height: 80px; float: left;}
+#view .text .phterHead img{ width: 100%;height: 100%; border-radius: 40px;}
+#view .text .phterName{ float: left;margin-top: 30px;margin-left: 20px; font-size: 18px; color: #fff}
+.clear{ clear: both;}
+#view .text .phter2 p{font-size: 52px; color: #fff; text-align: center; margin-top: -20px;}
+#view .text .phter2 p:after{ content:'￥/套'; font-size: 18px;}
+#view .text .phter3{ width: 100%; height: 40px; background: #313131; border-radius: 8px; padding: 5px 20px; margin-top:-10px;}
+#view .text .phter3 .sp1{ font-size: 18px; color: #fff;}
+#view .text .phter3 .sp2{ font-size: 18px; color: #fff; float: right;}
+#view .text .phter4{ margin-top: 10px;}
+#view .text .phter4 div{ margin-top: 5px;}
+#view .text .phter4 span{ font-size: 14px; color: #717171}
+#view .text .phter5{ margin-top: 20px;}
+#view .text .phter5 a{ background:#1A1A1A ;border: 1px solid #313131}
+#view .text .phter5 a h5{ color: #fff}
+#view .text .phter5 .btn1 {margin-top: 10px;width: 48%;}
+#view .text .phter5 .btn2 {margin-top: 10px;width: 50%;}
+#view .text .phter5 .btn3 {margin-top: 10px; width: 100%;}
+
+
+#choose{ text-align: center; margin-top: 40px;}
+#choose span{ font-size: 18px; color: #999;display:inline-block; width: 120px; height: 40px;cursor: pointer;}
+
+#contant li{ width: 32%; height: 280px; border: 1px solid #ccc; box-sizing: border-box;float: left; list-style: none}
+#contant li div{ width: 100%; height:250px; overflow: hidden;}
+#contant li img{ width: 100%}
+
+
+
+/* say */
+#say{text-align: center;}
+#say .lging{width: 80%;margin-left: 10%; height: 300px;}
+#say textarea{resize: none;}
+
+
+/* footer */
+.footer{ width: 100%;  color: #F5F5F5;background: #1A1A1A; height: 240px; margin-top: 40px;  }
+.footer ul{width: 100%;padding-top: 30px;}
+.footer ul div{font-size: 40px; margin-bottom: 20px;	  }
+.footer ul li{ list-style: none; float: left;width: 33%; text-align: center;	 }
+.footer p.bottom{  position: relative; top: 100px; width: 100%; text-align: center;   }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.oracle.dao.CusDao">
+
+	<insert id="register" parameterType="Customer">
+  		insert into tb_customer(cus_id,cus_username,cus_password,cus_name,cus_tel,cus_isModel,cus_isAlive) 
+  		values(null,#{cus_username},md5(#{cus_password}),#{cus_name},#{cus_tel},#{cus_isModel},1)
+	</insert>
+	
+	<select id="login" resultType="Customer">
+	    select cus_name,cus_head,cus_vipLevel from tb_customer
+	    where cus_username=#{username} and cus_password=md5(#{password}) and cus_isAlive=1
+	</select>
+	
+	<resultMap type="Goods" id="goods">
+		<id column="gos_id" property="gos_id"/>
+		<result column="gos_name" property="gos_name"/>
+		<collection property="gos_style" ofType="Style">
+			<result column="sty_name" property="sty_name"/>
+		</collection>
+	</resultMap>
+	
+	<!-- 返回摄影师 -->
+	<resultMap type="Photographer" id="photographer">
+		<id column="pho_id" property="pho_id"/>
+		<result column="pho_name" property="pho_name"/>
+		<result column="pho_head" property="pho_head"/>
+		<result column="pho_tel" property="pho_tel"/>
+		<result column="pho_studio" property="pho_studio"/>
+		<result column="pho_vipLevel" property="pho_vipLevel"/>
+		<collection property="pho_style" ofType="Style">
+			<result column="sty_name" property="sty_name"/>
+		</collection>
+<!--  		<collection property="pho_goods" ofType="Goods" select="selectForGoodsOfPhotographer">
+		</collection> -->
+	</resultMap>
+	<select id="check" resultMap="photographer">
+	<!-- select pho_id,pho_name,pho_head,pho_tel,pho_studio,pho_vipLevel,sty_name from tb_style,
+(select sty_id,a.pho_id,pho_name,pho_head,pho_tel,pho_studio,pho_vipLevel from tb_phosty,
+(select pho_id,pho_name,pho_head,pho_tel,pho_studio,pho_vipLevel from tb_photographer
+where pho_id=(select pho_id from tb_goods where gos_id=1)) a where a.pho_id=tb_phosty.pho_id) b
+where tb_style.sty_id=b.sty_id; -->			
+    
+		select a.pho_id,pho_name,pho_head,pho_tel,pho_studio,pho_vipLevel,sty_name from tb_photographer a,tb_style b,tb_phosty c
+		where a.pho_id=c.pho_id and b.sty_id=c.sty_id and a.pho_id=(select pho_id from tb_goods where gos_id=#{gos_id})
+	</select>
+	
+ 	<select id="selectForGoodsOfPhotographer" resultMap="goods">
+		select DISTINCT a.gos_id from tb_goods a,tb_gdssty b
+		where a.gos_id=b.gos_id and a.pho_id=#{pho_id}
+	</select>
+	
+	<select id="checkGoods" resultMap="goods">
+		select a.gos_id,gos_name,sty_name from tb_goods a,tb_style b,tb_gdssty c
+		where a.gos_id=c.gos_id and b.sty_id=c.sty_id and a.gos_id=#{gos_id}
+	</select>
+	
+	<!-- 评论区 -->
+	<!-- 发表评论 -->
+<!--  	<insert id="writeComment" parameterType="comment">
+		insert into tb_comment values(null,null,#{cus_id},null,#{cot_content},null,1)
+	</insert>
+	-->
+	
+	
+</mapper>
